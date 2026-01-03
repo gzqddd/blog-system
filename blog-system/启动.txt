@@ -1,0 +1,49 @@
+blog-backend/
+├── config/
+│   └── db.js         # MongoDB连接
+├── models/
+│   ├── User.js       # 用户模型
+│   └── Article.js    # 文章模型
+├── controllers/
+│   ├── authController.js  # 用户认证
+│   └── articleController.js # 文章管理
+├── middleware/
+│   ├── authMiddleware.js   # JWT保护中间件
+│   └── errorHandler.js     # 全局错误处理
+├── routes/
+│   ├── authRoutes.js       # 认证路由
+│   └── articleRoutes.js    # 文章路由
+├── app.js                 # 入口文件
+└── package.json           # 依赖配置
+
+blog-frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── services/
+│   │   └── api.js       # 请求封装
+│   ├── pages/
+│   │   ├── Login.jsx    # 登录
+│   │   ├── Register.jsx # 注册
+│   │   ├── Home.jsx     # 首页（文章列表）
+│   │   ├── Write.jsx    # 写文章
+│   │   └── Article.jsx  # 文章详情
+│   ├── components/
+│   │   └── Navbar.jsx   # 导航栏
+│   ├── App.jsx          # 入口组件
+│   ├── index.jsx        # 渲染入口
+│   └── index.css        # 全局样式
+└── package.json         # 依赖配置
+
+
+
+
+# 启动后端（先进入backend目录）
+cd backend
+npm install  # 第一次启动装依赖，后续可跳过
+npm run dev
+
+# 拆分终端，启动前端（进入frontend目录）
+cd frontend
+npm install  # 第一次启动装依赖，后续可跳过
+npm start
